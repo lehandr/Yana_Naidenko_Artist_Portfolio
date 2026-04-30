@@ -27,7 +27,7 @@ export default function Home() {
           >
             <div className="overflow-hidden bg-surface-container-low mb-6 aspect-square">
               <img
-                src={artwork.image}
+                src={`${import.meta.env.BASE_URL}${artwork.image.replace(/^\//, '')}`}
                 alt={artwork.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

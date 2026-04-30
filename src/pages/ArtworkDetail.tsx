@@ -30,7 +30,7 @@ export default function ArtworkDetail() {
       {/* Hero Section: Main Artwork */}
       <section className="w-full mb-24 overflow-hidden bg-surface-low">
         <img 
-          src={artwork.image} 
+          src={`${import.meta.env.BASE_URL}${artwork.image.replace(/^\//, '')}`} 
           alt={artwork.title} 
           className="w-full h-auto transition-transform duration-1000 hover:scale-[1.02]"
         />

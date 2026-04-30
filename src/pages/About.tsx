@@ -4,7 +4,7 @@ export default function About() {
       <section className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 mb-32 items-start">
         <div className="md:col-span-7 bg-surface-low overflow-hidden">
           <img 
-            src="images/artist-portrait/yana-naidenko.webp"
+            src={`${import.meta.env.BASE_URL}images/artist-portrait/yana-naidenko.webp`}
             alt="Artist Portrait - Yana Naidenko"
             className="w-full h-auto transition-transform duration-1000 hover:scale-[1.02]"
           />
