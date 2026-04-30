@@ -8,7 +8,7 @@ import ArtworkDetail from './pages/ArtworkDetail';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Yana_Naidenko_Artist_Portfolio">
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow flex flex-col">
