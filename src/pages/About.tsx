@@ -10,7 +10,7 @@ export default function About() {
           />
         </div>
         <div className="md:col-span-5 flex flex-col justify-center h-full">
-          <h1 className="font-headline leading-none uppercase font-medium text-black mb-8" style={{ fontSize: "40.5px", letterSpacing: "0.216em" }}>ARTIST STATEMENENT</h1>
+          <h1 className="font-headline leading-none tracking-tighter border-b-[0.5px] border-outline-variant/15 pb-12 uppercase font-medium text-black mb-12" style={{ fontSize: "31.6px", letterSpacing: "0.216em" }}>ARTIST STATEMENENT</h1>
           <div className="space-y-8 text-sm leading-[2] tracking-wide opacity-80">
             <p>My name is Yana Naidenko. I am an artist from Ukraine. I was born, studied painting, and worked in the city of Kharkiv. In 2022, due to the war in Ukraine, my family and I were forced to move to Slovenia, where I live and work now.</p>
             <p>The tragic events connected with the war in my country, as well as the forced move, influenced my creative work. The landscape became my main theme.</p>
@@ -27,7 +27,7 @@ export default function About() {
 
       <section className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 mb-24">
         <div className="md:col-span-4">
-          <h2 className="font-headline leading-none uppercase font-medium text-black sticky top-32" style={{ fontSize: "40.5px", letterSpacing: "0.216em" }}>CV</h2>
+          <h2 className="font-headline leading-none tracking-tighter border-b-[0.5px] border-outline-variant/15 pb-12 uppercase font-medium text-black sticky top-32" style={{ fontSize: "31.6px", letterSpacing: "0.216em" }}>CV</h2>
         </div>
         
         <div className="md:col-span-8 space-y-32">

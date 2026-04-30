@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <div className="pt-48 pb-32 px-12">
       <section className="mb-32">
-        <h2 
+        <h1 
           className="font-headline leading-none tracking-tighter border-b-[0.5px] border-outline-variant/15 pb-12 uppercase font-medium text-black"
-          style={{ fontSize: "40.5px", letterSpacing: "0.216em" }}
+          style={{ fontSize: "31.6px", letterSpacing: "0.216em" }}
         >
           Yana Naidenko
-        </h2>
+        </h1>
         <div className="mt-8 flex justify-end">
           <p className="max-w-md font-body text-sm font-light leading-relaxed text-on-surface-variant tracking-wide">
             My work is a reflection of an interaction with nature, where nature helps us find an anchor within ourselves and attain a state of inner silence and tranquility.
