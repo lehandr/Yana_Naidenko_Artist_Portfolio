@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { ARTWORKS } from '../lib/data';
-import { cn } from '../lib/utils';
 
 export default function Home() {
   return (
@@ -24,20 +23,17 @@ export default function Home() {
           <Link
             key={artwork.id}
             to={`/artwork/${artwork.id}`}
-            className={cn("group cursor-pointer block", artwork.marginTop)}
+            className="group cursor-pointer block"
           >
-            <div className="overflow-hidden bg-surface-container-low mb-6">
+            <div className="overflow-hidden bg-surface-container-low mb-6 aspect-square">
               <img
                 src={artwork.image}
                 alt={artwork.title}
-                className={cn(
-                  "w-full object-cover transition-transform duration-700 group-hover:scale-105",
-                  artwork.aspectRatio
-                )}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div className="font-body text-[10px] font-light tracking-[0.15rem] text-on-surface-variant uppercase flex flex-wrap items-center gap-2 mt-4">
-              {artwork.title} <span className="opacity-30 mx-1">|</span> {artwork.dimensions} <span className="opacity-30 mx-1">|</span> {artwork.medium} <span className="opacity-30 mx-1">|</span> {artwork.price}
+              {artwork.title} <span className="opacity-30 mx-1">|</span> {artwork.dimensions} <span className="opacity-30 mx-1">|</span> {artwork.medium}
             </div>
           </Link>
         ))}

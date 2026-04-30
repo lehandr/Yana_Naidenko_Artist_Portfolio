@@ -8,11 +8,11 @@ export default function ArtworkDetail() {
   return (
     <div className="px-8 md:px-12 max-w-[1440px] mx-auto mt-16 md:mt-24">
       {/* Hero Section: Main Artwork */}
-      <section className="w-full mb-24 overflow-hidden rounded-[3rem] bg-surface-low">
+      <section className="w-full mb-24 overflow-hidden bg-surface-low">
         <img 
           src={artwork.image} 
           alt={artwork.title} 
-          className="w-full aspect-[4/5] md:aspect-[16/9] object-cover transition-transform duration-1000 hover:scale-[1.02]"
+          className="w-full h-auto transition-transform duration-1000 hover:scale-[1.02]"
         />
       </section>
 
@@ -23,8 +23,6 @@ export default function ArtworkDetail() {
           <span>{artwork.dimensions}</span>
           <span className="opacity-30">|</span>
           <span>{artwork.medium}</span>
-          <span className="opacity-30">|</span>
-          <span>{artwork.price}</span>
         </div>
       </section>
 
