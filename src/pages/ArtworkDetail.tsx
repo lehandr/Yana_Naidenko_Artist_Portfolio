@@ -5,6 +5,26 @@ export default function ArtworkDetail() {
   const { id } = useParams();
   const artwork = ARTWORKS.find(a => a.id === id) || ARTWORKS[3];
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const location = formData.get('location');
+    const message = formData.get('message');
+    
+    let body = "";
+    if (name) body += `Name: ${name}\n`;
+    if (email) body += `Email: ${email}\n`;
+    if (location) body += `Location: ${location}\n\n`;
+    if (message) body += `${message}`;
+
+    const subject = `ARTIST PROTFOLIO - Request Information - ${artwork.title}`;
+    const mailtoUrl = `mailto:yana.naidenko@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoUrl;
+  };
+
   return (
     <div className="px-8 md:px-12 max-w-[1440px] mx-auto mt-16 md:mt-24">
       {/* Hero Section: Main Artwork */}
@@ -64,23 +84,23 @@ export default function ArtworkDetail() {
           <p className="text-sm font-light leading-relaxed tracking-wide opacity-80">For acquisition inquiries or to schedule a private viewing.</p>
         </div>
         
-        <form className="space-y-12">
+        <form onSubmit={handleSubmit} className="space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="relative">
-              <input type="text" placeholder="FULL NAME" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors" />
+              <input name="name" type="text" placeholder="FULL NAME" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors" />
             </div>
             <div className="relative">
-              <input type="email" placeholder="EMAIL ADDRESS" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors" />
+              <input name="email" type="email" placeholder="EMAIL ADDRESS" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors" />
             </div>
           </div>
           <div className="relative">
-            <input type="text" placeholder="LOCATION (CITY, COUNTRY)" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors" />
+            <input name="location" type="text" placeholder="LOCATION (CITY, COUNTRY)" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors" />
           </div>
           <div className="relative pt-4">
-            <textarea placeholder="YOUR MESSAGE" rows={4} className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors resize-none" />
+            <textarea name="message" placeholder="YOUR MESSAGE" rows={4} className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors resize-none" />
           </div>
-          <div className="flex justify-center pt-12">
-            <button type="button" className="bg-primary text-on-primary px-16 py-6 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-primary-container transition-all active:scale-95">
+          <div className="pt-12">
+            <button type="submit" className="w-full bg-primary text-on-primary py-6 text-[10px] font-bold tracking-[0.3em] uppercase transition-colors hover:bg-primary-container">
               Submit Inquiry
             </button>
           </div>

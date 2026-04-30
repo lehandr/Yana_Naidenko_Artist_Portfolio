@@ -6,10 +6,8 @@ export const ARTWORKS = [
     medium: "Oil",
     year: "2023",
     description: [
-      "Work from the \"Earth Element\" series",
-      "About the \"Earth Element\" series. Nature has always inspired me — it is an infinite source of energy. In this series of works, I turn to the Earth. Earth as an element represents stability and firmness, a foundation for life and movement. Trees, flowers, grasses — everything changes and grows, following its natural rhythms, yet at the same time remains unchangeable and constant.",
-      "Creating these landscapes, I immerse myself in the contemplation of something greater than flowers and grasses. It is that which is within everyone — calmness and harmony, love and truth. That which is constant and unchangeable helps us to endure and serves as a support.",
-      "Communication with Nature helps me to see and feel this. And I would like to capture this state on canvas to convey it to the viewer."
+      "Work from the \"Silence\" series",
+      "About the \"Silence\" series. In this collection, I seek to express a state of meditation and inner stillness — that quiet space within, where through the contemplation of nature we can connect with Nature in its highest sense."
     ],
     image: "/images/artworks/winter-silence.webp",
     aspectRatio: "aspect-[4/3]",
