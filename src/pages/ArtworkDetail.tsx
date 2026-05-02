@@ -1,28 +1,35 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ARTWORKS } from '../lib/data';
 
 export default function ArtworkDetail() {
   const { id } = useParams();
   const artwork = ARTWORKS.find(a => a.id === id) || ARTWORKS[3];
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const location = formData.get('location');
-    const message = formData.get('message');
-    
-    let body = "";
-    if (name) body += `Name: ${name}\n`;
-    if (email) body += `Email: ${email}\n`;
-    if (location) body += `Location: ${location}\n\n`;
-    if (message) body += `${message}`;
+    setStatus('sending');
 
-    const subject = `ARTIST PROTFOLIO - Request Information - ${artwork.title}`;
-    const mailtoUrl = `mailto:yana.naydenko@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    window.location.href = mailtoUrl;
+    const formData = new FormData(e.currentTarget);
+    formData.append('access_key', 'a2fb25b0-f3a0-4a1e-9a25-d0e9c95e2359');
+    formData.append('subject', `ARTIST PORTFOLIO - Request Information - ${artwork.title}`);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus('success');
+        e.currentTarget.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -100,9 +107,11 @@ export default function ArtworkDetail() {
             <textarea name="message" placeholder="YOUR MESSAGE" rows={4} className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors resize-none" />
           </div>
           <div className="pt-12">
-            <button type="submit" className="w-full bg-primary text-on-primary py-6 text-[10px] font-bold tracking-[0.3em] uppercase transition-colors hover:bg-primary-container">
-              Submit Inquiry
+            <button type="submit" disabled={status === 'sending'} className="w-full bg-primary text-on-primary py-6 text-[10px] font-bold tracking-[0.3em] uppercase transition-colors hover:bg-primary-container disabled:opacity-50">
+              {status === 'sending' ? 'Sending...' : 'Submit Inquiry'}
             </button>
+            {status === 'success' && <p className="text-center text-xs tracking-[0.15em] text-green-700 mt-4">Inquiry sent successfully!</p>}
+            {status === 'error' && <p className="text-center text-xs tracking-[0.15em] text-red-600 mt-4">Something went wrong. Please try again.</p>}
           </div>
         </form>
       </section>
