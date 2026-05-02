@@ -49,7 +49,7 @@ export default function ArtworkDetail() {
 
       {/* Metadata Section */}
       <section className="mb-32 border-b border-outline-variant/15 pb-16">
-        <h1 className="font-headline leading-none tracking-tighter uppercase font-medium text-black mb-6" style={{ fontSize: "40.5px", letterSpacing: "0.216em" }}>{artwork.title}</h1>
+        <h1 className="font-headline leading-none tracking-tighter uppercase font-medium text-black mb-6 break-words" style={{ fontSize: "clamp(18px, 5vw, 40.5px)", letterSpacing: "0.216em" }}>{artwork.title}</h1>
         <div className="text-[10px] tracking-[0.2em] uppercase flex flex-wrap items-center gap-4 opacity-80 font-bold">
           <span>{artwork.dimensions}</span>
           <span className="opacity-30">|</span>
