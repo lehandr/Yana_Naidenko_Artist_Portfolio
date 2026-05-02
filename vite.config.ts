@@ -10,6 +10,7 @@ export default defineConfig(({mode}) => {
     base: '/Yana_Naidenko_Artist_Portfolio/',
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.WEB3FORMS_ACCESS_KEY': JSON.stringify(env.WEB3FORMS_ACCESS_KEY),
     },
     resolve: {
       alias: {
