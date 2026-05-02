@@ -20,13 +20,13 @@ export default function ArtworkDetail() {
     if (message) body += `${message}`;
 
     const subject = `ARTIST PROTFOLIO - Request Information - ${artwork.title}`;
-    const mailtoUrl = `mailto:yana.naidenko@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoUrl = `mailto:yana.naydenko@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     window.location.href = mailtoUrl;
   };
 
   return (
-    <div className="px-8 md:px-12 max-w-[1440px] mx-auto mt-16 md:mt-24">
+    <div className="px-8 md:px-12 max-w-360 mx-auto mt-16 md:mt-24">
       {/* Hero Section: Main Artwork */}
       <section className="w-full mb-24 overflow-hidden bg-surface-low">
         <img 
@@ -60,16 +60,16 @@ export default function ArtworkDetail() {
         <div className="md:col-span-8 space-y-12">
           {(artwork as any).description ? (
             (artwork as any).description.map((paragraph: string, index: number) => (
-              <p key={index} className="text-lg font-light leading-[2] tracking-wide max-w-2xl opacity-80">
+              <p key={index} className="text-lg font-light leading-loose tracking-wide max-w-2xl opacity-80">
                 {paragraph}
               </p>
             ))
           ) : (
             <>
-              <p className="text-lg font-light leading-[2] tracking-wide max-w-2xl opacity-80">
+              <p className="text-lg font-light leading-loose tracking-wide max-w-2xl opacity-80">
                 This piece explores the transient nature of memory and the physical manifestation of silence. Through layering multiple veils of thinned oil paint against heavy, structured impasto, "{artwork.title}" creates a dialogue between the seen and the felt. The composition is an exercise in restraint, allowing the canvas's raw texture to breathe through the indigo voids.
               </p>
-              <p className="text-lg font-light leading-[2] tracking-wide max-w-2xl opacity-80">
+              <p className="text-lg font-light leading-loose tracking-wide max-w-2xl opacity-80">
                 Inspired by the atmospheric shifts of the Atlantic coastline at dusk, the work serves as a silent curator of time—capturing the precise moment when the horizon line dissolves into the mist.
               </p>
             </>

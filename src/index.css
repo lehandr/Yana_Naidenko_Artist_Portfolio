@@ -57,6 +57,10 @@
   --font-label: 'EB Garamond', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+html {
+  font-size: 110%;
+}
+
 body {
   @apply font-body bg-background text-primary antialiased;
   min-height: max(884px, 100dvh);
