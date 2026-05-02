@@ -5,9 +5,14 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const form = e.currentTarget;
+    const message = new FormData(form).get('message')?.toString().trim();
+    if (!message) return;
+
     setStatus('sending');
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     formData.append('access_key', 'a2fb25b0-f3a0-4a1e-9a25-d0e9c95e2359');
     formData.append('subject', 'ARTIST PORTFOLIO - Inquire');
 
@@ -19,7 +24,7 @@ export default function Contact() {
       const data = await res.json();
       if (data.success) {
         setStatus('success');
-        e.currentTarget.reset();
+        form.reset();
       } else {
         setStatus('error');
       }
