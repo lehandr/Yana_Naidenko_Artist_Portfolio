@@ -19,9 +19,9 @@ export default function Navbar() {
         </div>
         
         <nav className="hidden md:flex gap-12">
-          <Link to="/" className={location.pathname === "/" ? "text-zinc-950 border-b border-zinc-950 pb-1 font-sans text-[10px] font-light tracking-[0.2rem] uppercase transition-colors duration-300" : "text-zinc-500 font-sans text-[10px] font-light tracking-[0.2rem] uppercase hover:text-zinc-950 transition-colors duration-300"}>WORKS</Link>
-          <Link to="/about" className={location.pathname === "/about" ? "text-zinc-950 border-b border-zinc-950 pb-1 font-sans text-[10px] font-light tracking-[0.2rem] uppercase transition-colors duration-300" : "text-zinc-500 font-sans text-[10px] font-light tracking-[0.2rem] uppercase hover:text-zinc-950 transition-colors duration-300"}>ABOUT</Link>
-          <Link to="/contact" className={location.pathname === "/contact" ? "text-zinc-950 border-b border-zinc-950 pb-1 font-sans text-[10px] font-light tracking-[0.2rem] uppercase transition-colors duration-300" : "text-zinc-500 font-sans text-[10px] font-light tracking-[0.2rem] uppercase hover:text-zinc-950 transition-colors duration-300"}>CONTACT</Link>
+          <Link to="/" className={location.pathname === "/" ? "text-zinc-950 border-b border-zinc-950 pb-1 font-sans text-[11px] font-light tracking-[0.2rem] uppercase transition-colors duration-300" : "text-zinc-500 font-sans text-[11px] font-light tracking-[0.2rem] uppercase hover:text-zinc-950 transition-colors duration-300"}>WORKS</Link>
+          <Link to="/about" className={location.pathname === "/about" ? "text-zinc-950 border-b border-zinc-950 pb-1 font-sans text-[11px] font-light tracking-[0.2rem] uppercase transition-colors duration-300" : "text-zinc-500 font-sans text-[11px] font-light tracking-[0.2rem] uppercase hover:text-zinc-950 transition-colors duration-300"}>ABOUT</Link>
+          <Link to="/contact" className={location.pathname === "/contact" ? "text-zinc-950 border-b border-zinc-950 pb-1 font-sans text-[11px] font-light tracking-[0.2rem] uppercase transition-colors duration-300" : "text-zinc-500 font-sans text-[11px] font-light tracking-[0.2rem] uppercase hover:text-zinc-950 transition-colors duration-300"}>CONTACT</Link>
         </nav>
       </header>
 

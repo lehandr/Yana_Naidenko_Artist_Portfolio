@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="px-8 md:px-12 max-w-[1440px] mx-auto mt-16 md:mt-32">
+    <div className="px-8 md:px-12 max-w-360 mx-auto mt-16 md:mt-32">
       <section className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 mb-32 items-start">
         <div className="md:col-span-7 bg-surface-low overflow-hidden">
           <img 
@@ -11,7 +11,7 @@ export default function About() {
         </div>
         <div className="md:col-span-5 flex flex-col justify-center h-full">
           <h1 className="font-headline leading-none tracking-tighter border-b-[0.5px] border-outline-variant/15 pb-12 uppercase font-medium text-black mb-12" style={{ fontSize: "31.6px", letterSpacing: "0.216em" }}>ARTIST STATEMENENT</h1>
-          <div className="space-y-8 text-sm leading-[2] tracking-wide opacity-80">
+          <div className="space-y-8 text-lg leading-loose tracking-wide opacity-80">
             <p>My name is Yana Naidenko. I am an artist from Ukraine. I was born, studied painting, and worked in the city of Kharkiv. In 2022, due to the war in Ukraine, my family and I were forced to move to Slovenia, where I live and work now.</p>
             <p>The tragic events connected with the war in my country, as well as the forced move, influenced my creative work. The landscape became my main theme.</p>
             <p>I have always found inspiration in nature, but especially during this time of grief and loss, I felt and realised anew how communication with Nature helps me preserve myself and not lose my footing.</p>
@@ -31,7 +31,7 @@ export default function About() {
         </div>
         
         <div className="md:col-span-8 space-y-32">
-          <div className="space-y-6 text-sm leading-[2] tracking-wide opacity-80">
+          <div className="space-y-6 text-lg leading-loose tracking-wide opacity-80">
             <div>
               <p className="font-bold text-black opacity-100">Yana Naidenko</p>
               <p>Born in 1980</p>
@@ -76,13 +76,13 @@ export default function About() {
 function CVSection({ title, items }: { title: string, items: { title: string, location: string, year: string, curator?: string, link?: string }[] }) {
   return (
     <div className="space-y-12">
-      <h3 className="text-[10px] tracking-[0.2em] uppercase opacity-50 font-bold mb-8">{title}</h3>
+      <h3 className="text-lg tracking-[0.2em] uppercase opacity-50 font-bold mb-8">{title}</h3>
       <div className="space-y-8">
         {items.map((item, index) => {
           const content = (
             <div className={`flex flex-col md:flex-row md:justify-between border-b border-outline-variant/15 pb-6 gap-4 ${item.link ? 'hover:opacity-60 transition-opacity' : ''}`}>
               <div className="flex flex-col">
-                <span className="font-bold text-sm tracking-wide flex items-center gap-2">
+                <span className="font-bold text-lg tracking-wide flex items-center gap-2">
                   {item.title}
                   {item.link && (
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-50">
@@ -91,11 +91,11 @@ function CVSection({ title, items }: { title: string, items: { title: string, lo
                   )}
                 </span>
                 {item.curator && (
-                  <span className="text-sm tracking-wide opacity-60 mt-1 italic">Curated by {item.curator}</span>
+                  <span className="text-lg tracking-wide opacity-60 mt-1 italic">Curated by {item.curator}</span>
                 )}
               </div>
               <div className="flex flex-col md:items-end mt-2 md:mt-0">
-                <span className="text-sm tracking-wide opacity-80">{item.location}</span>
+                <span className="text-lg tracking-wide opacity-80">{item.location}</span>
                 <span className="text-[10px] tracking-[0.2em] uppercase opacity-50 mt-2">{item.year}</span>
               </div>
             </div>

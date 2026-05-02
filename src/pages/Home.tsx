@@ -12,7 +12,7 @@ export default function Home() {
           Yana Naidenko
         </h1>
         <div className="mt-8 flex justify-end">
-          <p className="max-w-md font-body text-sm font-light leading-relaxed text-on-surface-variant tracking-wide">
+          <p className="max-w-md font-body text-lg font-light leading-relaxed text-on-surface-variant tracking-wide">
             My work is a reflection of an interaction with nature, where nature helps us find an anchor within ourselves and attain a state of inner silence and tranquility.
           </p>
         </div>
