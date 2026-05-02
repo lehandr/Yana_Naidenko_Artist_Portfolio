@@ -13,7 +13,7 @@ export default function Contact() {
     setStatus('sending');
 
     const formData = new FormData(form);
-    formData.append('access_key', 'a2fb25b0-f3a0-4a1e-9a25-d0e9c95e2359');
+    formData.append('access_key', process.env.WEB3FORMS_ACCESS_KEY ?? '');
     formData.append('subject', 'ARTIST PORTFOLIO - Inquire');
 
     try {
