@@ -49,7 +49,7 @@ export default function ArtworkDetail() {
 
       {/* Metadata Section */}
       <section className="mb-32 border-b border-outline-variant/15 pb-16">
-        <h1 className="font-headline leading-none tracking-tighter uppercase font-medium text-black mb-6 break-words" style={{ fontSize: "clamp(18px, 5vw, 40.5px)", letterSpacing: "0.216em" }}>{artwork.title}</h1>
+        <h1 className="font-headline leading-none tracking-tighter uppercase font-medium text-black mb-6 wrap-break-words" style={{ fontSize: "clamp(18px, 5vw, 40.5px)", letterSpacing: "0.216em" }}>{artwork.title}</h1>
         <div className="text-[10px] tracking-[0.2em] uppercase flex flex-wrap items-center gap-4 opacity-80 font-bold">
           <span>{artwork.dimensions}</span>
           <span className="opacity-30">|</span>
@@ -98,20 +98,20 @@ export default function ArtworkDetail() {
         <form onSubmit={handleSubmit} className="space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="relative">
-              <input name="name" type="text" placeholder="FULL NAME" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors" />
+              <input name="name" type="text" placeholder="FULL NAME" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[13px] tracking-[0.2em] uppercase outline-none transition-colors" />
             </div>
             <div className="relative">
-              <input name="email" type="email" placeholder="EMAIL ADDRESS" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors" />
+              <input name="email" type="email" placeholder="EMAIL ADDRESS" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[13px] tracking-[0.2em] uppercase outline-none transition-colors" />
             </div>
           </div>
           <div className="relative">
-            <input name="location" type="text" placeholder="LOCATION (CITY, COUNTRY)" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors" />
+            <input name="location" type="text" placeholder="LOCATION (CITY, COUNTRY)" className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[13px] tracking-[0.2em] uppercase outline-none transition-colors" />
           </div>
           <div className="relative pt-4">
-            <textarea name="message" placeholder="YOUR MESSAGE" rows={4} className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[10px] tracking-[0.2em] uppercase outline-none transition-colors resize-none" />
+            <textarea name="message" placeholder="YOUR MESSAGE" rows={4} className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-primary text-[13px] tracking-[0.2em] uppercase outline-none transition-colors resize-none" />
           </div>
           <div className="pt-12">
-            <button type="submit" disabled={status === 'sending'} className="w-full bg-primary text-on-primary py-6 text-[10px] font-bold tracking-[0.3em] uppercase transition-colors hover:bg-primary-container disabled:opacity-50">
+            <button type="submit" disabled={status === 'sending'} className="w-full bg-primary text-on-primary py-6 text-[13px] font-bold tracking-[0.3em] uppercase transition-colors hover:bg-primary-container disabled:opacity-50">
               {status === 'sending' ? 'Sending...' : 'Submit Inquiry'}
             </button>
             {status === 'success' && <p className="text-center text-xs tracking-[0.15em] text-green-700 mt-4">Inquiry sent successfully!</p>}

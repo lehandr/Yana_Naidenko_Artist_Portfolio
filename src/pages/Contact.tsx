@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div className="max-w-360 mx-auto">
       <div className="px-8 md:px-12 py-32 md:py-48 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24">
         {/* Left Section */}
         <div className="md:col-span-5 flex flex-col justify-start">
@@ -56,18 +56,18 @@ export default function Contact() {
         <div className="md:col-span-6 md:col-start-7 bg-surface-low p-8 md:p-16 flex flex-col justify-center shadow-sm">
           <form onSubmit={handleSubmit} className="space-y-16">
             <div className="relative">
-              <label className="block text-[10px] font-bold tracking-[0.2em] opacity-50 mb-6 uppercase">Name</label>
+              <label className="block text-[13px] font-bold tracking-[0.2em] opacity-50 mb-6 uppercase">Name</label>
               <input name="name" type="text" placeholder="ENTER YOUR FULL NAME" className="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary px-0 py-3 text-xs font-light tracking-[0.2em] uppercase transition-all outline-none" />
             </div>
             <div className="relative">
-              <label className="block text-[10px] font-bold tracking-[0.2em] opacity-50 mb-6 uppercase">Email Address</label>
+              <label className="block text-[13px] font-bold tracking-[0.2em] opacity-50 mb-6 uppercase">Email Address</label>
               <input name="email" type="email" placeholder="EMAIL@EXAMPLE.COM" className="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary px-0 py-3 text-xs font-light tracking-[0.2em] uppercase transition-all outline-none" />
             </div>
             <div className="relative">
-              <label className="block text-[10px] font-bold tracking-[0.2em] opacity-50 mb-6 uppercase">Message</label>
+              <label className="block text-[13px] font-bold tracking-[0.2em] opacity-50 mb-6 uppercase">Message</label>
               <textarea name="message" placeholder="DESCRIBE YOUR INQUIRY OR PROJECT..." rows={5} className="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary px-0 py-3 text-xs font-light tracking-[0.2em] uppercase transition-all resize-none outline-none" />
             </div>
-            <button type="submit" disabled={status === 'sending'} className="w-full bg-primary text-on-primary py-6 text-[10px] font-bold tracking-[0.3em] uppercase transition-colors hover:bg-primary-container disabled:opacity-50">
+            <button type="submit" disabled={status === 'sending'} className="w-full bg-primary text-on-primary py-6 text-[13px] font-bold tracking-[0.3em] uppercase transition-colors hover:bg-primary-container disabled:opacity-50">
               {status === 'sending' ? 'Sending...' : 'Send Message'}
             </button>
             {status === 'success' && <p className="text-center text-xs tracking-[0.15em] text-green-700 mt-4">Message sent successfully!</p>}

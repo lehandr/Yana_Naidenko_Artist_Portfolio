@@ -15,8 +15,8 @@ export default function Footer() {
         <a href="https://www.pinterest.com/yananaydenko/" className="text-zinc-400 dark:text-zinc-600 font-sans text-[10px] font-light tracking-[0.2rem] uppercase hover:text-zinc-950 dark:hover:text-zinc-50 hover:underline underline-offset-8 transition-opacity opacity-100 hover:opacity-70">
           PINTEREST
         </a>
-        <a href="https://www.saatchiart.com/en-si/iananai" className="text-zinc-400 dark:text-zinc-600 font-sans text-[10px] font-light tracking-[0.2rem] uppercase hover:text-zinc-950 dark:hover:text-zinc-50 hover:underline underline-offset-8 transition-opacity opacity-100 hover:opacity-70">
-          SAARCHI ART
+        <a href="https://www.artfinder.com/artist/yana-naidenko/" className="text-zinc-400 dark:text-zinc-600 font-sans text-[10px] font-light tracking-[0.2rem] uppercase hover:text-zinc-950 dark:hover:text-zinc-50 hover:underline underline-offset-8 transition-opacity opacity-100 hover:opacity-70">
+          ARTFINDER
         </a>
       </div>
     </footer>
